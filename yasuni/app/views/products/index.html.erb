@@ -1,9 +1,21 @@
 <h1>All Products</h1>
 
 
+
+
+<div class="index">
+
+
 <% @products.each do |product| %>
-<li><%= product.name %></li>
-<li><%= product.price_in_cents %></li>
-<li><%= product.description %></li>
-<li><%= product.url %></li><hr>
+<%= product.name %>
+<%= product.price_in_cents %>
+<%= product.description %>
+<img src="<%= product.url %>" alt="product.id">
+
 <% end %>
+
+</div>
+
+
+
+ <%= link_to("Add new product", new_product_path) %>

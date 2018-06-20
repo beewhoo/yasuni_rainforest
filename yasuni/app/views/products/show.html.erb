@@ -1,1 +1,15 @@
-<h1>Show</h1>
+
+
+
+
+
+<img src="<%= @product.url %>" alt="@product.id"> <br>
+<h4>Desription</h4>
+<%= @product.name %>
+<%= @product.price_in_cents %>
+<%= @product.description %>
+
+
+<div class="edit_delete">
+<%= link_to("Edit", "/products/#{@product.id}/edit") %> <%= link_to("Delete", "/products/#{@product.id}", method: :delete, data: {confirm: "Are you sure you want to delete this picture?"})  %> </p>
+</div>

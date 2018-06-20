@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Yasuni</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -8,6 +9,16 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
+    <%=image_tag("logo.png") %>
+
+
+  <nav class="navigation">
+    <li>Home</li>
+    <li>Catalog</li>
+    <li>Return Policy</li>
+    <li>Contact Us</li>
+  </nav>
 
   <body>
     <%= yield %>
