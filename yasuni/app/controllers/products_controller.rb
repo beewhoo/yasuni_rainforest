@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
 
 
        if  @product.save
-           redirect_to :index
+           redirect_to "/products"
             flash[:success] = "Product successful added!"
          else
            render :new
@@ -29,6 +29,7 @@ class ProductsController < ApplicationController
 
       def show
         @product = Product.find(params[:id])
+        @review = Review.new
       end
 
 
