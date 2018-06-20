@@ -19,8 +19,8 @@ class ProductsController < ApplicationController
 
 
        if  @product.save
-           redirect_to "/products"
-            flash[:success] = "Product successful added!"
+            flash[:notice] = "Product successful added!"
+            redirect_to "/products"
          else
            render :new
        end
